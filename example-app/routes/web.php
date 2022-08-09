@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::delete('/about', function () {
+Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/about',function(){
+    return view('about');
+});
+
+Route::get('/user',function(){
+    return "Merhaba user";
 });
