@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\About\AboutController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about',function(){
-    return view('about', ['name' => 'Cekap']);
-});
 
-Route::get('/user',function(){
-    return "Merhaba user";
+
+Route::controller(AboutController::class)->group(function(){
+    Route::get('/about','about');
+    Route::get('/user','index');
 });
