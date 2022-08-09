@@ -13,4 +13,7 @@ class AboutController extends Controller
     public function about(){
         return view('about', ['name' => 'Cekap']);
     }
+    public function iletisim(){
+        return view('contact',);
+    }
 }

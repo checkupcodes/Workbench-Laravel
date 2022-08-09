@@ -15,13 +15,18 @@
     $sayi = 20;
     ?>
     @if ($sayi > 10)
-        <h4>Sayi değerimiz {{$sayi}}</h4>
+        <h4>Sayi değerimiz {{ $sayi }}</h4>
     @elseif($sayi == 15)
         <h4>Sayi değerimiz 15</h4>
     @else
         <h4>Sayi değeri bilinmiyor</h4>
     @endif
-
+    <hr />
+    <a href="{{route('page.contact')}}">İletişim sayfasina gitmek için tikla</a>
+    <hr />
+    <a href="{{route('page.user')}}">User sayfasina git</a>
+    <hr>
+    <a href="{{url('/')}}">Ana sayfa</a>
 </body>
 
 </html>

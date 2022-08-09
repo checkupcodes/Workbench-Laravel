@@ -17,11 +17,12 @@ use App\Http\Controllers\About\AboutController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->name('home');
 });
 
 
 Route::controller(AboutController::class)->group(function(){
-    Route::get('/about','about');
-    Route::get('/user','index');
+    Route::get('/about','about')->name('page.about');
+    Route::get('/user','index')->name('page.user');
+    Route::get('/contact','iletisim')->name('page.contact');
 });
