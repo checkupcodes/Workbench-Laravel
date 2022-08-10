@@ -17,7 +17,7 @@ use App\Http\Controllers\About\AboutController;
 */
 
 Route::get('/', function () {
-    return view('welcome')->name('home');
+    return view('welcome');
 });
 
 
