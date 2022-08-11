@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\About\AboutController;
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::controller(AboutController::class)->group(function(){
-    Route::get('/about','about')->name('page.about')->middleware('check.age');
-    Route::get('/user','index')->name('page.user');
-    Route::get('/contact','iletisim')->name('page.contact');
-});
+require __DIR__.'/auth.php';
