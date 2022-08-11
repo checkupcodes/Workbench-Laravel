@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 
 Route::controller(AboutController::class)->group(function(){
-    Route::get('/about','about')->name('page.about');
+    Route::get('/about','about')->name('page.about')->middleware('check.age');
     Route::get('/user','index')->name('page.user');
     Route::get('/contact','iletisim')->name('page.contact');
 });
