@@ -16,7 +16,7 @@
 
     <title>Check-up Codes Dashboard</title>
 
-    <link rel="shortcut icon" type="image/png" href="{{asset('backend/images')}}/favicon.png">
+    <link rel="shortcut icon" type="image/ico" href="{{asset('backend/images')}}/favicon.ico">
     <link href="{{asset('backend/vendor')}}/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="{{asset('backend/vendor')}}/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('backend/vendor')}}/nouislider/nouislider.min.css">

@@ -15,7 +15,7 @@
                                         class="flaticon-381-search-2"></i></a></span>
                         </div>
                     </li>
-                    <li class="nav-item dropdown notification_dropdown">
+                    {{-- <li class="nav-item dropdown notification_dropdown">
                         <a class="nav-link " href="javascript:void(0);">
                             <svg width="28" height="28" viewbox="0 0 28 28" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +205,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </li>
+                    </li> --}}
                     <li class="nav-item dropdown  header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                             <img src="{{ asset('backend/images') }}/user.jpg" width="56" alt="">
