@@ -82,7 +82,7 @@ background-repeat: no-repeat;
                                     </form>
                                     <div class="row d-flex justify-content-between mt-4 mb-2">
                                         <div class="mb-1">
-                                            <a href="page-forgot-password.html">Forgot Password?</a>
+                                            <a href="{{route('password.request')}}">Forgot Password?</a>
                                         </div>
                                     </div>
                                     <div class="new-account mt-1">
