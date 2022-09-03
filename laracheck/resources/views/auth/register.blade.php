@@ -24,6 +24,7 @@
 background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  opacity: 0.9;
   " >
     <div class="authincation h-100">
         <div class="container h-100">
