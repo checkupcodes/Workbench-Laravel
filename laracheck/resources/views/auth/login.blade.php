@@ -50,7 +50,7 @@ background-repeat: no-repeat;
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Password</strong></label>
                                             <input id="password" type="password" name="password" class="form-control"
-                                                value="Password" required autofocus>
+                                                placeholder="Password" required autofocus>
                                         </div>
 
                                         <div class="text-center">
