@@ -12,7 +12,8 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form class="form-valide-with-icon needs-validation" novalidate="">
+                                <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data" class="form-valide-with-icon needs-validation" >
+                                    @csrf
                                     <div class="mb-3">
                                         <label class="text-label form-label" for="validationCustomUsername">Name and
                                             Surname</label>
@@ -20,7 +21,7 @@
                                             <span class="input-group-text">
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input type="text" class="form-control" id="validationCustomUsername"
+                                            <input name="name" type="text" class="form-control" id="validationCustomUsername"
                                                 value="{{ $editData->name }}" required="" />
                                         </div>
                                     </div>
@@ -30,7 +31,7 @@
                                             <span class="input-group-text">
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input type="text" class="form-control" id="validationCustomUsername"
+                                            <input name="username" type="text" class="form-control" id="validationCustomUsername"
                                                 value="{{ $editData->username }}" required="" />
                                         </div>
                                     </div>
@@ -40,12 +41,12 @@
                                             <span class="input-group-text">
                                                 <i class="fa fa-envelope"></i>
                                             </span>
-                                            <input type="text" class="form-control" id="validationCustomUsername"
+                                            <input name="email" type="text" class="form-control" id="validationCustomUsername"
                                                 value="{{ $editData->email }}" required="" />
                                         </div>
                                     </div>
 
-                                    <div class="mb-3">
+                                    {{-- <div class="mb-3">
                                         <label class="text-label form-label" for="dlab-password">Password *</label>
                                         <div class="input-group transparent-append">
                                             <span class="input-group-text">
@@ -61,7 +62,7 @@
                                                 Please Enter a username.
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="mb-3">
                                         <label class="text-label form-label" for="validationCustomUsername">Select new
@@ -71,7 +72,7 @@
                                                 <i class="fa fa-image"></i>
                                             </span>
                                             <div class="form-file py-2">
-                                                <input id="image" type="file" class="form-file-input form-control" />
+                                                <input name="profile_image" id="image" type="file" class="form-file-input form-control" />
                                             </div>
                                         </div>
                                     </div>
