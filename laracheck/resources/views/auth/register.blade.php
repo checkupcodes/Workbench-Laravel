@@ -42,8 +42,13 @@ background-repeat: no-repeat;
                                     <form method="POST" action="{{ route('register') }}">
                                         @csrf
                                         <div class="mb-3">
+                                            <label class="mb-1"><strong>Name & Surname</strong></label>
+                                            <input id="name"  type="text" name="name"  class="form-control" placeholder="Name and surname" required autofocus>
+                                        </div>
+
+                                        <div class="mb-3">
                                             <label class="mb-1"><strong>Username</strong></label>
-                                            <input id="name"  type="text" name="name"  class="form-control" placeholder="Username" required autofocus>
+                                            <input id="username"  type="text" name="username"  class="form-control" placeholder="Username" required autofocus>
                                         </div>
 
                                         <div class="mb-3">
