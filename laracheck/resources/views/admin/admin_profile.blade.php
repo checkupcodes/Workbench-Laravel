@@ -22,8 +22,8 @@
                             </div>
                             <div class="profile-info">
                                 <div class="profile-photo">
-                                    <img src="{{ asset('backend/images/profile/itsme.jpeg') }}"
-                                        class="img-fluid rounded-circle" alt="" />
+                                    <img src="{{ (!empty($adminData->profile_image)?url('upload/admin_images/'.$adminData->profile_image):url('upload/no_image.jpg')) }}" class="rounded-circle img-fluid" alt="profile_image">
+                                      
                                 </div>
                                 <div class="profile-details">
                                     <div class="profile-name px-3 pt-2">

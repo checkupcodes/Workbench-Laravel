@@ -12,7 +12,8 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data" class="form-valide-with-icon needs-validation" >
+                                <form method="POST" action="{{ route('store.profile') }}" enctype="multipart/form-data"
+                                    class="form-valide-with-icon needs-validation">
                                     @csrf
                                     <div class="mb-3">
                                         <label class="text-label form-label" for="validationCustomUsername">Name and
@@ -21,8 +22,9 @@
                                             <span class="input-group-text">
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input name="name" type="text" class="form-control" id="validationCustomUsername"
-                                                value="{{ $editData->name }}" required="" />
+                                            <input name="name" type="text" class="form-control"
+                                                id="validationCustomUsername" value="{{ $editData->name }}"
+                                                required="" />
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -31,8 +33,9 @@
                                             <span class="input-group-text">
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input name="username" type="text" class="form-control" id="validationCustomUsername"
-                                                value="{{ $editData->username }}" required="" />
+                                            <input name="username" type="text" class="form-control"
+                                                id="validationCustomUsername" value="{{ $editData->username }}"
+                                                required="" />
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -41,8 +44,9 @@
                                             <span class="input-group-text">
                                                 <i class="fa fa-envelope"></i>
                                             </span>
-                                            <input name="email" type="text" class="form-control" id="validationCustomUsername"
-                                                value="{{ $editData->email }}" required="" />
+                                            <input name="email" type="text" class="form-control"
+                                                id="validationCustomUsername" value="{{ $editData->email }}"
+                                                required="" />
                                         </div>
                                     </div>
 
@@ -72,7 +76,8 @@
                                                 <i class="fa fa-image"></i>
                                             </span>
                                             <div class="form-file py-2">
-                                                <input name="profile_image" id="image" type="file" class="form-file-input form-control" />
+                                                <input name="profile_image" id="image" type="file"
+                                                    class="form-file-input form-control" />
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +101,10 @@
                             <h4 class="card-title">Profile Image</h4>
                         </div>
                         <div class="card-body">
-                            <img id="ProfileImage" src="{{ asset('backend/images/profile/itsme.jpeg') }}" alt="" width="450px">
+                            <img id="ProfileImage"
+                                src="{{ !empty($editData->profile_image) ? url('upload/admin_images/' . $editData->profile_image) : url('upload/no_image.jpg') }}"
+                                class="rounded-circle img-fluid" alt="profile_image">
+
                         </div>
                     </div>
                 </div>

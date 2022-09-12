@@ -1,3 +1,7 @@
+@php
+$data = App\Models\User::find(Auth::user()->id);
+@endphp
+
 <div class="header border-bottom">
     <div class="header-content">
         <nav class="navbar navbar-expand">
@@ -208,10 +212,10 @@
                     </li> --}}
                     <li class="nav-item dropdown  header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <img src="{{ asset('backend/images') }}/user.jpg" width="56" alt="">
+                            <img src="{{ (!empty($data->profile_image)?url('upload/admin_images/'.$data->profile_image):url('upload/no_image.jpg')) }}" class="rounded-circle img-fluid" alt="profile_image" width="56px">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a href="{{route('admin.profile')}}" class="dropdown-item ai-icon">
+                            <a href="{{ route('admin.profile') }}" class="dropdown-item ai-icon">
                                 <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
                                     width="18" height="18" viewbox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -233,7 +237,7 @@
                                 </svg>
                                 <span class="ms-2">Inbox </span>
                             </a>
-                            <a href="{{route('admin.logout')}}" class="dropdown-item ai-icon">
+                            <a href="{{ route('admin.logout') }}" class="dropdown-item ai-icon">
                                 <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
                                     width="18" height="18" viewbox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
