@@ -17,6 +17,9 @@
     <title>Admin - Login</title>
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('backend/images') }}/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
     <link href="{{ asset('backend/css') }}/style.css" rel="stylesheet">
 </head>
 
@@ -82,7 +85,7 @@ background-repeat: no-repeat;
                                     </form>
                                     <div class="row d-flex justify-content-between mt-4 mb-2">
                                         <div class="mb-1">
-                                            <a href="{{route('password.request')}}">Forgot Password?</a>
+                                            <a href="{{ route('password.request') }}">Forgot Password?</a>
                                         </div>
                                     </div>
                                     <div class="new-account mt-1">
@@ -105,6 +108,27 @@ background-repeat: no-repeat;
     <script src="{{ asset('backend/js') }}/custom.min.js"></script>
     <script src="{{ asset('backend/js') }}/dlabnav-init.js"></script>
     <script src="{{ asset('backend/js') }}/styleSwitcher.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        @if (Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}"
+            switch (type) {
+                case 'info':
+                    toastr.info(" {{ Session::get('message') }} ");
+                    break;
+                case 'success':
+                    toastr.success(" {{ Session::get('message') }} ");
+                    break;
+                case 'warning':
+                    toastr.warning(" {{ Session::get('message') }} ");
+                    break;
+                case 'error':
+                    toastr.error(" {{ Session::get('message') }} ");
+                    break;
+            }
+        @endif
+    </script>
 </body>
 
 </html>

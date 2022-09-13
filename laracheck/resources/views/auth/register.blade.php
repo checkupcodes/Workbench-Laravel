@@ -18,14 +18,17 @@
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('backend/images') }}/favicon.ico">
     <link href="{{ asset('backend/css') }}/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
 </head>
 
-<body class="vh-100" style="background-image: url({{ asset('backend/images/backfoto.jpeg') }});
+<body class="vh-100"
+    style="background-image: url({{ asset('backend/images/backfoto.jpeg') }});
 background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   opacity: 0.9;
-  " >
+  ">
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -43,26 +46,32 @@ background-repeat: no-repeat;
                                         @csrf
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Name & Surname</strong></label>
-                                            <input id="name"  type="text" name="name"  class="form-control" placeholder="Name and surname" required autofocus>
+                                            <input id="name" type="text" name="name" class="form-control"
+                                                placeholder="Name and surname" required autofocus>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Username</strong></label>
-                                            <input id="username"  type="text" name="username"  class="form-control" placeholder="Username" required autofocus>
+                                            <input id="username" type="text" name="username" class="form-control"
+                                                placeholder="Username" required autofocus>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Email</strong></label>
-                                            <input id="email"  type="email" name="email"  class="form-control" placeholder="Email" required autofocus>
+                                            <input id="email" type="email" name="email" class="form-control"
+                                                placeholder="Email" required autofocus>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input id="password"  type="password" name="password"  class="form-control" placeholder="Password" required autofocus>
+                                            <input id="password" type="password" name="password" class="form-control"
+                                                placeholder="Password" required autofocus>
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Password Confirmation</strong></label>
-                                            <input id="password_confirmation"  type="password" name="password_confirmation"  class="form-control" placeholder="Password Confirmation" required autofocus>
+                                            <input id="password_confirmation" type="password"
+                                                name="password_confirmation" class="form-control"
+                                                placeholder="Password Confirmation" required autofocus>
                                         </div>
 
                                         <div class="text-center mt-4">
@@ -71,7 +80,8 @@ background-repeat: no-repeat;
 
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Already have an account? <a class="text-primary" href="{{route('login')}}">Sign
+                                        <p>Already have an account? <a class="text-primary"
+                                                href="{{ route('login') }}">Sign
                                                 in</a></p>
                                     </div>
                                 </div>
@@ -88,6 +98,27 @@ background-repeat: no-repeat;
     <script src="{{ asset('backend/js') }}/custom.min.js"></script>
     <script src="{{ asset('backend/js') }}/dlabnav-init.js"></script>
     <script src="{{ asset('backend/js') }}/styleSwitcher.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        @if (Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}"
+            switch (type) {
+                case 'info':
+                    toastr.info(" {{ Session::get('message') }} ");
+                    break;
+                case 'success':
+                    toastr.success(" {{ Session::get('message') }} ");
+                    break;
+                case 'warning':
+                    toastr.warning(" {{ Session::get('message') }} ");
+                    break;
+                case 'error':
+                    toastr.error(" {{ Session::get('message') }} ");
+                    break;
+            }
+        @endif
+    </script>
 </body>
 
 </html>
