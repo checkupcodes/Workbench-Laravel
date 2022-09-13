@@ -10,7 +10,16 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('store.profile') }}" enctype="multipart/form-data"
+                                @if (count($errors) > 0)
+                                    <div class="alert alert-danger solid alert-dismissible fade show">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                <form method="POST" action="{{ route('update.profile') }}"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
 
@@ -22,7 +31,7 @@
                                                 <i class="fa fa-lock"></i>
                                             </span>
                                             <input name="old_password" type="password" class="form-control"
-                                                id="old_password" placeholder="Choose a safe one.." required="" />
+                                                id="old_password" placeholder="Choose a safe one.."  />
                                             <span class="input-group-text show-pass">
                                                 <i class="fa fa-eye-slash"></i>
                                                 <i class="fa fa-eye"></i>
@@ -37,7 +46,7 @@
                                                 <i class="fa fa-lock"></i>
                                             </span>
                                             <input name="new_password" type="password" class="form-control"
-                                                id="new_password" placeholder="Choose a safe one.." required="" />
+                                                id="new_password" placeholder="Choose a safe one.." />
                                             <span class="input-group-text show-pass">
                                                 <i class="fa fa-eye-slash"></i>
                                                 <i class="fa fa-eye"></i>
@@ -52,7 +61,7 @@
                                                 <i class="fa fa-lock"></i>
                                             </span>
                                             <input name="confirm_password" type="password" class="form-control"
-                                                id="confirm_password" placeholder="Choose a safe one.." required="" />
+                                                id="confirm_password" placeholder="Choose a safe one.."  />
                                             <span class="input-group-text show-pass">
                                                 <i class="fa fa-eye-slash"></i>
                                                 <i class="fa fa-eye"></i>
@@ -73,8 +82,7 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
+
 @endsection
