@@ -44,7 +44,7 @@ class AdminController extends Controller
             $file->move(public_path('upload/admin_images'), $filename);
             $data['profile_image'] = $filename;
         };
-        
+
         $data->save();
         $notification = array(
             'message' => 'Profile Updated Successfully',

@@ -16,12 +16,14 @@
 
     <title>Check-up Codes Dashboard</title>
 
-    <link rel="shortcut icon" type="image/ico" href="{{asset('backend/images')}}/favicon.ico">
-    <link href="{{asset('backend/vendor')}}/jquery-nice-select/css/nice-select.css" rel="stylesheet">
-    <link href="{{asset('backend/vendor')}}/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('backend/vendor')}}/nouislider/nouislider.min.css">
+    <link rel="shortcut icon" type="image/ico" href="{{ asset('backend/images') }}/favicon.ico">
+    <link href="{{ asset('backend/vendor') }}/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="{{ asset('backend/vendor') }}/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('backend/vendor') }}/nouislider/nouislider.min.css">
 
-    <link href="{{asset('backend/css')}}/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+    <link href="{{ asset('backend/css') }}/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,22 +46,22 @@
 
 
     <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{asset('backend/vendor')}}/global/global.min.js"></script>
-    <script src="{{asset('backend/vendor')}}/chart.js/Chart.bundle.min.js"></script>
-    <script src="{{asset('backend/vendor')}}/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="{{ asset('backend/vendor') }}/global/global.min.js"></script>
+    <script src="{{ asset('backend/vendor') }}/chart.js/Chart.bundle.min.js"></script>
+    <script src="{{ asset('backend/vendor') }}/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 
-    <script src="{{asset('backend/vendor')}}/apexchart/apexchart.js"></script>
-    <script src="{{asset('backend/vendor')}}/chart.js/Chart.bundle.min.js"></script>
+    <script src="{{ asset('backend/vendor') }}/apexchart/apexchart.js"></script>
+    <script src="{{ asset('backend/vendor') }}/chart.js/Chart.bundle.min.js"></script>
 
-    <script src="{{asset('backend/vendor')}}/peity/jquery.peity.min.js"></script>
+    <script src="{{ asset('backend/vendor') }}/peity/jquery.peity.min.js"></script>
 
-    <script src="{{asset('backend/js')}}/dashboard/dashboard-1.js"></script>
-    <script src="{{asset('backend/vendor')}}/owl-carousel/owl.carousel.js"></script>
-    <script src="{{asset('backend/js')}}/custom.min.js"></script>
-    <script src="{{asset('backend/js')}}/dlabnav-init.js"></script>
-    <script src="{{asset('backend/js')}}/demo.js"></script>
-    <script src="{{asset('backend/js')}}/styleSwitcher.js"></script>
-    
+    <script src="{{ asset('backend/js') }}/dashboard/dashboard-1.js"></script>
+    <script src="{{ asset('backend/vendor') }}/owl-carousel/owl.carousel.js"></script>
+    <script src="{{ asset('backend/js') }}/custom.min.js"></script>
+    <script src="{{ asset('backend/js') }}/dlabnav-init.js"></script>
+    <script src="{{ asset('backend/js') }}/demo.js"></script>
+    <script src="{{ asset('backend/js') }}/styleSwitcher.js"></script>
+
     <script>
         function cardsCenter() {
 
@@ -104,6 +106,29 @@
                 cardsCenter();
             }, 1000);
         });
+    </script>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        @if (Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}"
+            switch (type) {
+                case 'info':
+                    toastr.info(" {{ Session::get('message') }} ");
+                    break;
+                case 'success':
+                    toastr.success(" {{ Session::get('message') }} ");
+                    break;
+                case 'warning':
+                    toastr.warning(" {{ Session::get('message') }} ");
+                    break;
+                case 'error':
+                    toastr.error(" {{ Session::get('message') }} ");
+                    break;
+            }
+        @endif
     </script>
 </body>
 
