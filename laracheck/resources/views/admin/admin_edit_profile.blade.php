@@ -84,13 +84,21 @@
 
 
 
-                                    <button type="submit" class="btn me-2 btn-primary">
+                                    <button type="submit" class="mt-5 btn me-2 btn-primary">
                                         Submit
                                     </button>
-                                    <button type="submit" class="btn btn-light">
-                                        cencel
+                                    <button type="submit" class="mt-5 btn btn-light">
+                                        Cancel
                                     </button>
+
                                 </form>
+                                <hr>
+                                <a href="{{ route('change.password') }}">
+                                    <button type="submit" class="mt-3 py-1 btn me-2 btn-primary">
+                                        Change Password
+                                    </button>
+
+                                </a>
                             </div>
                         </div>
                     </div>

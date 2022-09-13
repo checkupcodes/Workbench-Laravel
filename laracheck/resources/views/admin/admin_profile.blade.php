@@ -22,8 +22,9 @@
                             </div>
                             <div class="profile-info">
                                 <div class="profile-photo">
-                                    <img src="{{ (!empty($adminData->profile_image)?url('upload/admin_images/'.$adminData->profile_image):url('upload/no_image.jpg')) }}" class="rounded-circle img-fluid" alt="profile_image">
-                                      
+                                    <img src="{{ !empty($adminData->profile_image) ? url('upload/admin_images/' . $adminData->profile_image) : url('upload/no_image.jpg') }}"
+                                        class="rounded-circle img-fluid" alt="profile_image">
+
                                 </div>
                                 <div class="profile-details">
                                     <div class="profile-name px-3 pt-2">
@@ -38,7 +39,7 @@
                                     </div> --}}
 
                                     <div class="dropdown ms-auto">
-                                        <a href="{{route('edit.profile')}}">
+                                        <a href="{{ route('edit.profile') }}">
                                             <button type="button" class="btn btn-primary btn-md m-3">Edit
                                                 Profile</button>
                                         </a>
@@ -61,6 +62,12 @@
                                             <li class="dropdown-item">
                                                 <i class="fa fa-user-circle text-primary me-2"></i>
                                                 View profile
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a href="{{route('change.password')}}">
+                                                    <i class="fa fa-key text-primary me-2"></i>
+                                                    Change Password
+                                                </a>
                                             </li>
                                             <li class="dropdown-item">
                                                 <i class="fa fa-users text-primary me-2"></i> Add to
