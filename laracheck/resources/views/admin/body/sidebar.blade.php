@@ -23,10 +23,10 @@
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-file-alt"></i>
-                    <span class="nav-text">Forms</span>
+                    <span class="nav-text">Home Slider</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="form-element.html">Form Elements</a></li>
+                    <li><a href="{{route('home.slide')}}">Home Slider Setup</a></li>
                     <li><a href="form-wizard.html">Wizard</a></li>
                     <li><a href="form-ckeditor.html">CkEditor</a></li>
                     <li><a href="form-pickers.html">Pickers</a></li>
