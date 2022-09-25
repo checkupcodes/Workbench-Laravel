@@ -33,6 +33,7 @@ Route::controller(AdminController::class)->group(function () {
 //Home Slide Controller Route
 Route::controller(HomeSlideController::class)->group(function () {
     Route::get('/home/slide', 'HomeSlide')->name('home.slide');
+    Route::post('/upload/slide', 'UploadSlide')->name('upload.slide');
 });
 
 Route::get('/dashboard', function () {

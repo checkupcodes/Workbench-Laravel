@@ -12,9 +12,12 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" enctype="multipart/form-data"
+                                <form method="POST" action="{{route('upload.slide')}}" enctype="multipart/form-data"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
+
+                                    <input type="hidden" name="id" value="{{$homeSlider->id}}">
+
                                     <div class="mb-3">
                                         <label class="text-label form-label" for="validationCustomUsername">
                                             Title
@@ -97,7 +100,7 @@
                         </div>
                         <div class="card-body">
                             <img id="ProfileImage"
-                                src="{{ !empty($homeSlider->home_slide) ? url('upload/home_slider/' . $homeSlider->home_slide) : url('upload/no_image.jpg') }}"
+                                src="{{ !empty($homeSlider->home_slide) ? url($homeSlider->home_slide) : url('upload/no_image.jpg') }}"
                                 class="rounded-circle img-fluid" alt="profile_image">
                         </div>
                     </div>
