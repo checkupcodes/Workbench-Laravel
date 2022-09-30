@@ -12,11 +12,11 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{route('upload.slide')}}" enctype="multipart/form-data"
+                                <form method="POST" action="{{ route('upload.slide') }}" enctype="multipart/form-data"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
 
-                                    <input type="hidden" name="id" value="{{$homeSlider->id}}">
+                                    <input type="hidden" name="id" value="{{ $homeSlider->id }}">
 
                                     <div class="mb-3">
                                         <label class="text-label form-label" for="validationCustomUsername">
@@ -71,7 +71,7 @@
                                         <label class="text-label form-label" for="validationCustomUsername">
                                             Slide Image
                                         </label>
-                                        <div class="input-group">         
+                                        <div class="input-group">
                                             <div class="form-file py-2">
                                                 <input name="home_slide" id="image" type="file"
                                                     class="form-file-input form-control" />
@@ -88,7 +88,7 @@
                                         Cancel
                                     </button>
 
-                                </form>                             
+                                </form>
                             </div>
                         </div>
                     </div>

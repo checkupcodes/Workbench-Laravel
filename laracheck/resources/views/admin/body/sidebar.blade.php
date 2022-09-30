@@ -1,6 +1,6 @@
 <div class="dlabnav">
     <div class="dlabnav-scroll">
-        <ul class="metismenu" id="menu" style="height:90%" >
+        <ul class="metismenu" id="menu" style="height:90%">
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-home"></i>
                     <span class="nav-text">Dashboard</span>
@@ -23,11 +23,11 @@
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-file-alt"></i>
-                    <span class="nav-text">Home Slider</span>
+                    <span class="nav-text">Home</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{route('home.slide')}}">Home Slider Setup</a></li>
-                    <li><a href="form-wizard.html">Wizard</a></li>
+                    <li><a href="{{ route('home.slide') }}">Home Slider Setup</a></li>
+                    <li><a href="{{ route('about.page') }}">About Page Setup</a></li>
                     <li><a href="form-ckeditor.html">CkEditor</a></li>
                     <li><a href="form-pickers.html">Pickers</a></li>
                     <li><a href="form-validation.html">Form Validate</a></li>
