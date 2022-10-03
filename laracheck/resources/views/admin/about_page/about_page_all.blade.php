@@ -5,7 +5,7 @@
     <div class="content-body">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">About Page Forms</h4>
@@ -18,64 +18,81 @@
 
                                     <input type="hidden" name="id" value="{{ $aboutPage->id }}">
 
-                                    <div class="mb-3">
-                                        <label class="text-label form-label" for="validationCustomUsername">
+                                    <div class="mb-4" style="display :flex">
+                                        <label class="form-control text-label form-label center text-4xl"
+                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;"
+                                            for="validationCustomUsername">
                                             Title
                                         </label>
                                         <div class="input-group">
                                             <input name="title" type="text" class="form-control"
-                                                id="validationCustomUsername" value="{{ $aboutPage->title }}"
-                                                required="" />
+                                                style="margin-left: 30px" id="validationCustomUsername"
+                                                value="{{ $aboutPage->title }}" required="" />
                                         </div>
                                     </div>
+                                    <hr />
 
-                                    <div class="mb-3">
-                                        <label class="text-label form-label" for="validationCustomUsername">
+                                    <div class="mb-4" style="display :flex">
+                                        <label class="form-control text-label form-label  center text-4xl"
+                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;"
+                                            for="validationCustomUsername">
                                             Short Title
                                         </label>
                                         <div class="input-group">
                                             <input name="short_title" type="text" class="form-control"
-                                                id="validationCustomUsername" value="{{ $aboutPage->short_title }}"
-                                                required="" />
+                                                style="margin-left: 30px" id="validationCustomUsername"
+                                                value="{{ $aboutPage->short_title }}" required="" />
                                         </div>
                                     </div>
+                                    <hr />
 
-                                    <div class="mb-3">
-                                        <label class="text-label form-label" for="validationCustomUsername">
+                                    <div class="mb-4" style="display :flex">
+                                        <label class="form-control"
+                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:13px;"
+                                            for="validationCustomUsername">
                                             Short Description
                                         </label>
                                         <div class="input-group">
                                             <textarea name="short_description" id="validationCustomUsername" type="text" class="form-control" rows="4"
-                                                id="comment">
+                                                style="margin-left: 30px" id="comment">
                                                 {{ $aboutPage->short_description }}
                                             </textarea>
                                         </div>
                                     </div>
+                                    <hr />
 
 
-                                    <div class="mb-3">
-                                        <label class="text-label form-label" for="validationCustomUsername">
-                                            About Image
+                                    <div class="mb-4" style="display :flex">
+                                        <label class="form-control "
+                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;"
+                                            for="validationCustomUsername">
+                                            Description
                                         </label>
-                                        <div class="input-group">
-                                            <div class="form-file py-2">
-                                                <input name="about_image" id="image" type="file"
-                                                    class="form-file-input form-control" />
-                                            </div>
+                                        <div class="input-group card-body custom-ekeditor">
+                                            <textarea id="ckeditor" name="description" type="text" class="form-control">
+                                                            {{ $aboutPage->description }}></textarea>
                                         </div>
                                     </div>
+                                    <hr />
 
 
-                                    <div class="row">
-                                        <div class="col-xl-12 col-xxl-12">
+
+                                    <div class="mb-4" style="display :flex">
+                                        <label class="form-control" for="validationCustomUsername"
+                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
+                                            About Image
+                                            <div class="input-group" style="margin-top: 15px;">                                   
+                                                <input name="home_slide" id="image" type="file"
+                                                    class="" style="margin-left: 30px;width:200px" />
+                                            </div>
+                                        </label>
+
+                                        <div class="col-lg-4">
                                             <div class="card">
-                                                <div class="card-header">
-                                                    <h4 class="card-title">Description</h4>
-                                                </div>
-                                                <div class="card-body custom-ekeditor">
-                                                    <div id="ckeditor" name="description" type="text"
-                                                        class="form-control" rows="4" id="comment">
-                                                        {{ $aboutPage->description }}></div>
+                                                <div class="card-body">
+                                                    <img id="ProfileImage"
+                                                        src="{{ !empty($aboutPage->about_image) ? url($aboutPage->about_image) : url('upload/no_image.jpg') }}"
+                                                        class="rounded-circle img-fluid" alt="profile_image">
                                                 </div>
                                             </div>
                                         </div>
@@ -91,18 +108,6 @@
 
                                 </form>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">About Image</h4>
-                        </div>
-                        <div class="card-body">
-                            <img id="ProfileImage"
-                                src="{{ !empty($aboutPage->about_image) ? url($aboutPage->about_image) : url('upload/no_image.jpg') }}"
-                                class="rounded-circle img-fluid" alt="profile_image">
                         </div>
                     </div>
                 </div>

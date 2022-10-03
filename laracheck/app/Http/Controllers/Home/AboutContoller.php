@@ -22,7 +22,7 @@ class AboutContoller extends Controller
         if($request->file('about_image')){
             $image = $request->file('about_image');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-            Image::make($image)->resize(520,600)->save('upload/home_about/'.$name_gen);
+            Image::make($image)->resize(800,800)->save('upload/home_about/'.$name_gen);
 
             $save_url = 'upload/home_about/'.$name_gen;
 
