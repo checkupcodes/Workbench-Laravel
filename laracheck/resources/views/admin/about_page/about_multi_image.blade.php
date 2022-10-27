@@ -12,8 +12,8 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('upload.about') }}" enctype="multipart/form-data"
-                                    class="form-valide-with-icon needs-validation">
+                                <form method="POST" action="{{ route('store.multi.image') }}" enctype="multipart/form-data"
+                                    class="form-valide-with-icon needs-validation" >
                                     @csrf
 
                                     <input type="hidden" name="id"">
@@ -23,8 +23,8 @@
                                             style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
                                             About Multi Image
                                             <div class="input-group" style="margin-top: 15px;">                                   
-                                                <input name="multi-image" id="image" type="file"
-                                                    class="" style="margin-left: 30px;width:200px" />
+                                                <input name="multi-image[]" id="image" type="file"
+                                                    class="" style="margin-left: 30px;width:200px" multiple=""/>
                                             </div>
                                         </label>
 
