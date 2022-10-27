@@ -41,6 +41,8 @@ Route::controller(HomeSlideController::class)->group(function () {
 Route::controller(AboutContoller::class)->group(function () {
     Route::get('/about/page', 'AboutPage')->name('about.page');
     Route::post('/upload/about', 'UploadAbout')->name('upload.about');
+    Route::get('/about', 'HomeAbout')->name('home.about');
+
 });
 
 
