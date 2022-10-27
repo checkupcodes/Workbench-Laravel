@@ -82,7 +82,7 @@
                                             style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
                                             About Image
                                             <div class="input-group" style="margin-top: 15px;">                                   
-                                                <input name="home_slide" id="image" type="file"
+                                                <input name="about_image" id="image" type="file"
                                                     class="" style="margin-left: 30px;width:200px" />
                                             </div>
                                         </label>

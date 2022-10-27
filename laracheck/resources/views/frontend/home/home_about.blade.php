@@ -57,7 +57,7 @@ $aboutPage = App\Models\About::find(1);
                             <img src="{{ asset('frontend/assets/img') }}/icons/about_icon.png" alt="">
                         </div>
                         <div class="about__exp__content">
-                            {{$aboutPage->short_title}}
+                            {!!$aboutPage->short_title!!}
                         </div>
                     </div>
                     <p class="desc">
