@@ -44,7 +44,7 @@ Route::controller(AboutContoller::class)->group(function () {
     Route::get('/about', 'HomeAbout')->name('home.about');
     Route::get('/about/multi/image', 'AboutMultiImage')->name('about.multi.image');
     Route::post('/store/multi/image', 'StoreMultiImage')->name('store.multi.image');
-
+    Route::get('/all/multi/image', 'AllMultiImage')->name('all.multi.image');
 
 });
 

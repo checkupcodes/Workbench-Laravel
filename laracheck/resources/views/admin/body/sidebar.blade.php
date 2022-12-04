@@ -29,6 +29,7 @@
                     <li><a href="{{ route('home.slide') }}">Home Slider Setup</a></li>
                     <li><a href="{{ route('about.page') }}">About Page Setup</a></li>
                     <li><a href="{{route('about.multi.image')}}">About Multi Images</a></li>
+                    <li><a href="{{route('all.multi.image')}}">All Multi Images</a></li>
                     <li><a href="form-pickers.html">Pickers</a></li>
                     <li><a href="form-validation.html">Form Validate</a></li>
                 </ul>
