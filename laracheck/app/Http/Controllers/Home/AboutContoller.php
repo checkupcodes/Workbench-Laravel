@@ -67,7 +67,8 @@ class AboutContoller extends Controller
         return view('admin.about_page.about_multi_image');
     }
 
-    public function StoreMultiImage(Request $request){
+    public function StoreMultiImage(Request $request)
+    {
         $image = $request->file('multi-image');
         foreach($image as $multi_img){
             $name_gen = hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
@@ -118,5 +119,20 @@ class AboutContoller extends Controller
             );
             return Redirect()->route('all.multi.image')->with($notification);
         }
+    }
+
+    public function DeleteMultiImage($id)
+    {
+       $multi = MultiImage::findOrFail($id);
+         $image = $multi->multi_image;
+         unlink($image);
+
+     MultiImage::findOrFail($id)->delete();
+
+     $notification = array(
+        'message' => 'Multi Image Delete Successfully',
+        'alert-type' => 'success'
+    );
+    return Redirect()->back()->with($notification);
     }
 }

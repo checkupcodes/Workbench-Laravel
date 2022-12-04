@@ -21,7 +21,7 @@
                                     <div class="mb-4" style="display :flex">
                                         <label class="form-control" for="validationCustomUsername"
                                             style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
-                                            Upload Multi Image
+                                           {{ $multiImages->id }}. picture
                                             <div class="input-group" style="margin-top: 15px;">
                                                 <input name="multi_image" id="image" type="file" class=""
                                                     style="margin-left: 30px;width:200px" />
@@ -32,7 +32,7 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <img id="ProfileImage" src="{{ asset($multiImages->multi_image) }}"
-                                                        class="rounded-circle img-fluid" alt="profile_image">
+                                                        class="img-fluid" alt="profile_image">
                                                 </div>
                                             </div>
                                         </div>
