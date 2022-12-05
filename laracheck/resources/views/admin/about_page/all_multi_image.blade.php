@@ -5,21 +5,11 @@
     <link href="{{ asset('backend/css') }}/style.css" rel="stylesheet" />
     <div class="content-body">
         <div class="container-fluid">
-            <div class="row page-titles">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active">
-                        <a href="javascript:void(0)">Table</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="javascript:void(0)">Multi Images</a>
-                    </li>
-                </ol>
-            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">About MultiImages</h4>
+                            <h4 class="card-title">About All Multi Images</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -27,7 +17,7 @@
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th style="width: 90%">About Image</th>
+                                            <th style="width: 60%">About Image</th>
                                             <th>Action</th>
                                             <th>Edit</th>
 
@@ -43,15 +33,15 @@
                                                         style="width: 60px;hight:50px">
                                                 </td>
                                                 <td>
-                                                    deneme
+                                                    {{$item->created_at}}
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="{{ route('edit.multi.image', $item->id) }}"
-                                                            class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                            class="btn btn-primary shadow btn-xl  me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
                                                         <a href="{{ route('delete.multi.image', $item->id) }}"
-                                                            class="btn btn-danger shadow btn-xs sharp" id="delete"><i
+                                                            class="btn btn-danger shadow btn-xl " id="delete"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>

@@ -1,5 +1,5 @@
 <div class="nav-header">
-    <a href="index.html" class="brand-logo">
+    <a href="{{url('/dashboard')}}" class="brand-logo">
         <img src="{{asset('backend/images/logo.png')}}" alt="png" width="65px">
         <div class="brand-title">
             <h2 class="">Cekap</h2>

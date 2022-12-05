@@ -19,8 +19,8 @@
                                     <input type="hidden" name="id" value="{{ $aboutPage->id }}">
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label form-label center text-4xl"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;"
+                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px"
                                             for="validationCustomUsername">
                                             Title
                                         </label>
@@ -33,8 +33,8 @@
                                     <hr />
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label form-label  center text-4xl"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;"
+                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px"
                                             for="validationCustomUsername">
                                             Short Title
                                         </label>
@@ -47,14 +47,14 @@
                                     <hr />
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:13px;"
+                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px"
                                             for="validationCustomUsername">
                                             Short Description
                                         </label>
                                         <div class="input-group">
                                             <textarea name="short_description" id="validationCustomUsername" type="text" class="form-control" rows="4"
-                                                style="margin-left: 30px" id="comment">
+                                                id="comment">
                                                 {{ $aboutPage->short_description }}
                                             </textarea>
                                         </div>
@@ -63,8 +63,8 @@
 
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control "
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;"
+                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px"
                                             for="validationCustomUsername">
                                             Description
                                         </label>
@@ -78,12 +78,11 @@
 
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control" for="validationCustomUsername"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
-                                            About Image
-                                            <div class="input-group" style="margin-top: 15px;">                                   
-                                                <input name="about_image" id="image" type="file"
-                                                    class="" style="margin-left: 30px;width:200px" />
+                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px">
+                                            About Image <div class="input-group" style="margin-top: 15px;">
+                                                <input name="about_image" id="image" type="file" class=""
+                                                    style="width: 220px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px" />
                                             </div>
                                         </label>
 

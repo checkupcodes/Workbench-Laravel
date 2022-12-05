@@ -8,31 +8,29 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">About Multi Image Page</h4>
+                            <h4 class="card-title">Add Multi Image Page</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('store.multi.image') }}" enctype="multipart/form-data"
-                                    class="form-valide-with-icon needs-validation" >
+                                <form method="post" action="{{ route('store.multi.image') }}" enctype="multipart/form-data"
+                                    class="form-valide-with-icon needs-validation">
                                     @csrf
 
-                                    <input type="hidden" name="id"">
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control" for="validationCustomUsername"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
+                                        <label class="form-control text-label  btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:10px ; font-size:14px;">
                                             About Multi Image
-                                            <div class="input-group" style="margin-top: 15px;">                                   
-                                                <input name="multi-image[]" id="image" type="file"
-                                                    class="" style="margin-left: 30px;width:200px" multiple=""/>
+                                            <div class="input-group" style="margin-top: 15px;">
+                                                <input name="multi_image[]" id="image" type="file" class=""
+                                                style="width: 220px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px" multiple="" />
                                             </div>
                                         </label>
 
                                         <div class="col-lg-4">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <img id="ProfileImage"
-                                                        src="{{ url('upload/no_image.jpg') }}"
+                                                    <img id="ProfileImage" src="{{ url('upload/no_image.jpg') }}"
                                                         class="rounded-circle img-fluid" alt="profile_image">
                                                 </div>
                                             </div>

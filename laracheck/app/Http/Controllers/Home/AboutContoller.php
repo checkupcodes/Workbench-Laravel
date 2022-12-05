@@ -69,7 +69,7 @@ class AboutContoller extends Controller
 
     public function StoreMultiImage(Request $request)
     {
-        $image = $request->file('multi-image');
+        $image = $request->file('multi_image');
         foreach($image as $multi_img){
             $name_gen = hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
             Image::make($multi_img)->resize(220,220)->save('upload/multi_image/'.$name_gen);
@@ -77,7 +77,7 @@ class AboutContoller extends Controller
             $save_url = 'upload/multi_image/'.$name_gen;
 
             MultiImage::insert([
-                'multi-image' => $save_url,
+                'multi_image' => $save_url,
                 'created_at' => now(),
             ]);
         }

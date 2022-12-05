@@ -18,86 +18,86 @@
 
                                     <input type="hidden" name="id" value="{{ $homeSlider->id }}">
 
-                                    <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label form-label center text-4xl"
-                                            for="validationCustomUsername"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
-                                            Title
-                                        </label>
-                                        <div class="input-group">
-                                            <input name="title" type="text" class="form-control"
-                                                id="validationCustomUsername" style="margin-left: 30px"
-                                                value="{{ $homeSlider->title }}" required="" />
-                                        </div>
-                                    </div>
-                                    <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label form-label center text-4xl"
-                                            for="validationCustomUsername"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
-
-                                            Description
-                                        </label>
-                                        <div class="input-group">
-                                            <input name="description" type="text" class="form-control"
-                                                id="validationCustomUsername" value="{{ $homeSlider->description }}"
-                                                required=""style="margin-left: 30px" />
-                                        </div>
-                                    </div>
-                                    <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label form-label center text-4xl"
-                                            for="validationCustomUsername"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:13px;">
-                                            Video Button Link
-                                        </label>
-                                        <div class="input-group">
-                                            <input name="video_url" type="text" class="form-control"
-                                                id="validationCustomUsername" value="{{ $homeSlider->video_url }}"
-                                                required="" style="margin-left: 30px" />
-                                        </div>
-                                    </div>
-
-                                    {{-- <div class="mb-3">
-                                        <label class="text-label form-label" for="dlab-password">Password *</label>
-                                        <div class="input-group transparent-append">
-                                            <span class="input-group-text">
-                                                <i class="fa fa-lock"></i>
-                                            </span>
-                                            <input type="password" class="form-control" id="dlab-password"
-                                                placeholder="Choose a safe one.." required="" />
-                                            <span class="input-group-text show-pass">
-                                                <i class="fa fa-eye-slash"></i>
-                                                <i class="fa fa-eye"></i>
-                                            </span>
-                                            <div class="invalid-feedback">
-                                                Please Enter a username.
+                                    <div
+                                        style="
+                                     display: grid;
+                                    justify-content: space-between;
+                                    grid-template-columns: 450px 550px; /*Make the grid smaller than the container*/
+                                    gap: 200px;
+                                    padding: 10px;">
+                                        <div style=" text-align: center;
+                                        ">
+                                            <div class="mb-4" style="display :flex">
+                                                <label
+                                                    class="form-control text-label btn btn-primary form-label center text-4xl"
+                                                    for="validationCustomUsername"
+                                                    style="width: 150px ;padding:10px;height:40px ; font-size:14px;">
+                                                    Title
+                                                </label>
+                                                <div class="input-group">
+                                                    <input name="title" type="text" class="form-control "
+                                                        id="validationCustomUsername" style="margin-left: 30px"
+                                                        value="{{ $homeSlider->title }}" required="" />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> --}}
+                                            <div class="mb-4" style="display :flex">
+                                                <label
+                                                    class="form-control text-label  btn btn-primary form-label center text-4xl"
+                                                    for="validationCustomUsername"
+                                                    style="width: 150px ;padding:10px ;height:40px ; font-size:14px;">
 
-                                    <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label form-label center text-4xl"
-                                            for="validationCustomUsername"
-                                            style="width: 150px ;padding:10px ;background-color:#ccc; font-size:15px;">
-                                            Slide Image
-                                            <div class="input-group" style="margin-top: 15px">
-                                                <input name="home_slide" id="image" type="file"
-                                                    class="" style="margin-left: 30px;width:200px" />
+                                                    Description
+                                                </label>
+                                                <div class="input-group">
+                                                    <input name="description" type="text" class="form-control"
+                                                        id="validationCustomUsername" value="{{ $homeSlider->description }}"
+                                                        required=""style="margin-left: 30px" />
+                                                </div>
                                             </div>
-                                        </label>
-
-                                        <div class="col-lg-4">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <img id="ProfileImage"
-                                                        src="{{ !empty($homeSlider->home_slide) ? url($homeSlider->home_slide) : url('upload/no_image.jpg') }}"
-                                                        class="rounded-circle img-fluid" alt="profile_image">
+                                            <div class="mb-4" style="display :flex">
+                                                <label
+                                                    class="form-control text-label  btn btn-primary form-label center text-4xl"
+                                                    for="validationCustomUsername"
+                                                    style="width: 150px ;padding:10px ;height:40px ; font-size:14px;">
+                                                    V. Button Link
+                                                </label>
+                                                <div class="input-group">
+                                                    <input name="video_url" type="text" class="form-control"
+                                                        id="validationCustomUsername" value="{{ $homeSlider->video_url }}"
+                                                        required="" style="margin-left: 30px" />
                                                 </div>
                                             </div>
                                         </div>
+                                        <div style="  text-align: center;
+                                        ">
+                                            <div class="mb-4" style="display :flex ">
+                                                <label
+                                                    class="form-control text-label btn btn-primary form-label center text-4xl"
+                                                    for="validationCustomUsername"
+                                                    style="width: 220px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px">
+                                                    Slide Image
+                                                    <div class="input-group" style="margin-top: 14px">
 
+                                                        <input name="home_slide" id="image" type="file"
+                                                            class="btn btn-primary"
+                                                            style="width: 220px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px" />
+                                                    </div>
+                                                </label>
+
+                                                <div class="col-lg-4">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <img id="ProfileImage"
+                                                                src="{{ !empty($homeSlider->home_slide) ? url($homeSlider->home_slide) : url('upload/no_image.jpg') }}"
+                                                                class="rounded-circle img-fluid" alt="profile_image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
                                     </div>
-
-
 
                                     <button type="submit" class="mt-5 btn me-2 btn-primary">
                                         Submit
