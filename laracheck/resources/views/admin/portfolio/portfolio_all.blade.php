@@ -43,7 +43,7 @@
                                                         <a href="{{ route('edit.portfolio', $item->id) }}"
                                                             class="btn btn-primary shadow btn-xl  me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
-                                                        <a href="{{ route('delete.multi.image', $item->id) }}"
+                                                        <a href="{{ route('delete.portfolio', $item->id) }}"
                                                             class="btn btn-danger shadow btn-xl " id="delete"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
