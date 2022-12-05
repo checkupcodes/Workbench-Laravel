@@ -9,28 +9,31 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">About All Multi Images</h4>
+                            <h4 class="card-title">POrtfolio All</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="example3" class="display" style="min-width: 845px">
                                     <thead>
                                         <tr>
-                                            <th>id</th>
-                                            <th style="width: 60%">About Image</th>
+                                            <th>SN</th>
+                                            <th style="width: 60%">Portfolio Name</th>
+                                            <th>Portfolio Title</th>
+                                            <th>Portfolio İmage</th>
                                             <th>Action</th>
-                                            <th>Edit</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @php($i = 1)
-                                        @foreach ($allMultiImages as $item)
+                                        @foreach ($portfolio as $item)
                                             <tr>
                                                 <td>{{ $i++ }}</td>
+                                                <td>{{ $item->portfolio_name}}</td>
+                                                <td>{{ $item->portfolio_title }}</td>
                                                 <td>
-                                                    <img src="{{ asset($item->multi_image) }}" alt=""
-                                                        style="width: 60px;hight:50px">
+                                                    <img src="{{ asset($item->portfolio_image) }}" alt=""
+                                                        style="width: 60px;height:50px">
                                                 </td>
                                                 <td>
                                                     {{ $item->created_at }}

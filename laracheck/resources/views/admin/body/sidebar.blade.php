@@ -34,6 +34,10 @@
                         <li><a href="{{ route('about.multi.image') }}">Add Multi Images</a></li>
                         <li><a href="{{ route('all.multi.image') }}">All Multi Images</a></li>
                     </ul>
+                    <ul style="border-bottom: 1px solid black">
+                        <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>
+                        <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>
+                    </ul>
                     <li><a href="form-pickers.html">Pickers</a></li>
                     <li><a href="form-validation.html">Form Validate</a></li>
                 </ul>
