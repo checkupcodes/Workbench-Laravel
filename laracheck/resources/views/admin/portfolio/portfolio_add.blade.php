@@ -24,8 +24,11 @@
                                         </label>
                                         <div class="input-group">
                                             <input name="portfolio_name" type="text" class="form-control"
-                                                style="margin-left: 30px" id="validationCustomUsername" required="" />
+                                                style="margin-left: 30px" id="validationCustomUsername" required />
                                         </div>
+                                        @error('portfolio_name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <hr />
 
@@ -38,6 +41,9 @@
                                         <div class="input-group">
                                             <input name="portfolio_title" type="text" class="form-control"
                                                 style="margin-left: 30px" id="validationCustomUsername" required="" />
+                                            @error('portfolio_title')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <hr />
@@ -51,6 +57,9 @@
                                         </label>
                                         <div class="input-group card-body custom-ekeditor">
                                             <textarea id="ckeditor" name="portfolio_description" type="text" class="form-control"></textarea>
+                                            @error('portfolio_description')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <hr />
@@ -63,15 +72,18 @@
                                             Portfolio Image <div class="input-group" style="margin-top: 15px;">
                                                 <input name="portfolio_image" id="image" type="file" class=""
                                                     style="width: 220px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px" />
+                                                @error('portfolio_image')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+
                                             </div>
                                         </label>
 
                                         <div class="col-lg-4">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <img id="ProfileImage"
-                                                        src="{{ url('upload/no_image.jpg') }}"
-                                                        class="rounded-circle img-fluid" alt="profile_image">
+                                                    <img id="ProfileImage" src="{{ url('upload/no_image.jpg') }}"
+                                                        class=" img-fluid" alt="profile_image">
                                                 </div>
                                             </div>
                                         </div>

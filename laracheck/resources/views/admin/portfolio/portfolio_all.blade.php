@@ -17,7 +17,7 @@
                                     <thead>
                                         <tr>
                                             <th>SN</th>
-                                            <th style="width: 60%">Portfolio Name</th>
+                                            <th >Portfolio Name</th>
                                             <th>Portfolio Title</th>
                                             <th>Portfolio İmage</th>
                                             <th>Action</th>
