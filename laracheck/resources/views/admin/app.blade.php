@@ -62,7 +62,7 @@
     <script src="{{ asset('backend/js') }}/demo.js"></script>
     <script src="{{ asset('backend/js') }}/styleSwitcher.js"></script>
 
-    //CK Editor
+
     <script src="{{ asset('backend/vendor') }}/ckeditor/ckeditor.js"></script>
 
 

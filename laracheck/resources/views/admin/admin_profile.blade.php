@@ -2,17 +2,6 @@
 @section('admin')
     <div class="content-body">
         <div class="container-fluid">
-            <div class="row page-titles">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active">
-                        <a href="javascript:void(0)">App</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="javascript:void(0)">Profile</a>
-                    </li>
-                </ol>
-            </div>
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="profile card card-body px-3 pt-3 pb-0">
@@ -64,7 +53,7 @@
                                                 View profile
                                             </li>
                                             <li class="dropdown-item">
-                                                <a href="{{route('change.password')}}">
+                                                <a href="{{ route('change.password') }}">
                                                     <i class="fa fa-key text-primary me-2"></i>
                                                     Change Password
                                                 </a>
@@ -88,10 +77,31 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-4">
-                    <div class="row">
-                        <div class="col-xl-12">
+            <div class="flex row">
+                <div class="col-xl-12">
+                    <div class="flex row">
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="profile-blog">
+                                        <h5 class="text-primary d-inline">Today Highlights</h5>
+                                        <img src="{{ asset('backend/images/profile/itsme.jpeg') }}" alt=""
+                                            class="img-fluid mt-4 mb-4 w-100" />
+                                        <h4>
+                                            <a href="post-details.html" class="text-black">Darwin Creative Agency
+                                                Theme</a>
+                                        </h4>
+                                        <p class="mb-0">
+                                            A small river named Duden flows by their place and
+                                            supplies it with the necessary regelialia. It is a
+                                            paradisematic country, in which roasted parts of
+                                            sentences fly into your mouth.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="profile-statistics">
@@ -172,28 +182,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="profile-blog">
-                                        <h5 class="text-primary d-inline">Today Highlights</h5>
-                                        <img src="{{ asset('backend/images/profile/itsme.jpeg') }}" alt=""
-                                            class="img-fluid mt-4 mb-4 w-100" />
-                                        <h4>
-                                            <a href="post-details.html" class="text-black">Darwin Creative Agency
-                                                Theme</a>
-                                        </h4>
-                                        <p class="mb-0">
-                                            A small river named Duden flows by their place and
-                                            supplies it with the necessary regelialia. It is a
-                                            paradisematic country, in which roasted parts of
-                                            sentences fly into your mouth.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             @endsection

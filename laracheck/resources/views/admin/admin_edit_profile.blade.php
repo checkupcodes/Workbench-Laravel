@@ -84,17 +84,21 @@
 
 
 
-                                    <button type="submit" class="mt-5 btn me-2 btn-primary">
+                                    <button type="submit" class="mt-5 btn btn-primary btn-md "
+                                        style="width:200px; height:40px;border-radius:8px">
                                         Submit
                                     </button>
-                                    <button type="submit" class="mt-5 btn btn-light">
+                                    <button type="submit" class="mt-5 btn btn-light btn-md"
+                                        style="width:200px; height:40px;border-radius:8px">
                                         Cancel
                                     </button>
 
                                 </form>
                                 <hr>
-                                <a href="{{ route('change.password') }}">
-                                    <button type="submit" class="mt-3 py-1 btn me-2 btn-primary">
+                                <a href="{{ route('change.password') }} ">
+                                    Şifreni değiştirmek mi istiyorsun ? <br/>
+                                    <button type="submit" class="mt-3 py-1 btn p-5 btn-primary"
+                                        style="border-radius: 8px; height:30px">
                                         Change Password
                                     </button>
 

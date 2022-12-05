@@ -23,7 +23,7 @@
                                      display: grid;
                                     justify-content: space-between;
                                     grid-template-columns: 450px 550px; /*Make the grid smaller than the container*/
-                                    gap: 200px;
+                                    gap: 100px;
                                     padding: 10px;">
                                         <div style=" text-align: center;
                                         ">
