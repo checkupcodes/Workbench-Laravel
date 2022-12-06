@@ -39,7 +39,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="{{ route('edit.blog.category', $item->id) }}"
+                                                        <a href="{{ route('edit.blog', $item->id) }}"
                                                             class="btn btn-primary shadow btn-xl  me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
                                                         <a href="{{ route('delete.blog.category', $item->id) }}"
