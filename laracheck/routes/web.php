@@ -89,6 +89,7 @@ Route::controller(BlogCategoryController::class)->group(function () {
 
 Route::controller(BlogController::class)->group(function () {
     Route::get('/all/blog', 'AllBlog')->name('all.blog');
+    Route::get('/add/blog', 'AddBlog')->name('add.blog');
 
 });
 

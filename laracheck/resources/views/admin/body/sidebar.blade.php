@@ -63,7 +63,7 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{ route('all.blog') }}">All Blog</a></li>
-                    {{-- <li><a href="{{ route('add.blog') }}">Add Blog</a></li> --}}
+                    <li><a href="{{ route('add.blog') }}">Add Blog</a></li>
                 </ul>
             </li>
         </ul>
