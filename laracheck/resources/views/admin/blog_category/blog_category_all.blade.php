@@ -17,7 +17,7 @@
                                     <thead>
                                         <tr>
                                             <th>SN</th>
-                                            <th>Blog Category Name</th>
+                                            <th style="width: 70%">Blog Category Name</th>
                                             <th>Action</th>
 
                                         </tr>
@@ -31,10 +31,10 @@
                                                 
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="{{ route('edit.portfolio', $item->id) }}"
+                                                        <a href="{{ route('edit.blog.category', $item->id) }}"
                                                             class="btn btn-primary shadow btn-xl  me-1"><i
                                                                 class="fas fa-pencil-alt"></i></a>
-                                                        <a href="{{ route('delete.portfolio', $item->id) }}"
+                                                        <a href="{{ route('delete.blog.category', $item->id) }}"
                                                             class="btn btn-danger shadow btn-xl " id="delete"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
