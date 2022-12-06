@@ -19,7 +19,7 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('store.blog') }}" enctype="multipart/form-data"
+                                <form method="POST" action="{{ route('update.blog') }}" enctype="multipart/form-data"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
 
