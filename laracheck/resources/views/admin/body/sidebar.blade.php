@@ -16,32 +16,37 @@
                 </ul>
             </li>
 
-            <li><a href="widget-basic.html" class="" aria-expanded="false">
-                    <i class="fas fa-user-check"></i>
-                    <span class="nav-text">Widget</span>
-                </a>
-            </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-file-alt"></i>
                     <span class="nav-text">Home</span>
                 </a>
                 <ul aria-expanded="false">
-                    <ul style="border-bottom: 1px solid black">
-                        <li><a href="{{ route('home.slide') }}">Home Slider Setup</a></li>
-                    </ul>
-                    <ul style="border-bottom: 1px solid black">
-                        <li><a href="{{ route('about.page') }}">About Page Setup</a></li>
-                        <li><a href="{{ route('about.multi.image') }}">Add Multi Images</a></li>
-                        <li><a href="{{ route('all.multi.image') }}">All Multi Images</a></li>
-                    </ul>
-                    <ul style="border-bottom: 1px solid black">
-                        <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>
-                        <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>
-                    </ul>
-                    <li><a href="form-pickers.html">Pickers</a></li>
-                    <li><a href="form-validation.html">Form Validate</a></li>
+                    <li><a href="{{ route('home.slide') }}">Home Slider Setup</a></li>
                 </ul>
             </li>
+            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-file-alt"></i>
+                    <span class="nav-text">About</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('about.page') }}">About Page Setup</a></li>
+                    <li><a href="{{ route('about.multi.image') }}">Add Multi Images</a></li>
+                    <li><a href="{{ route('all.multi.image') }}">All Multi Images</a></li>
+                </ul>
+                </a>
+            </li>
+
+            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-file-alt"></i>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>
+                    <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>
+                </ul>
+                </a>
+            </li>
+
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-table"></i>
                     <span class="nav-text">Table</span>

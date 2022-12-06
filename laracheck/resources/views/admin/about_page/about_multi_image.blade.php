@@ -31,7 +31,7 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <img id="ProfileImage" src="{{ url('upload/no_image.jpg') }}"
-                                                        class="rounded-circle img-fluid" alt="profile_image">
+                                                        class="rounded img-fluid" alt="profile_image">
                                                 </div>
                                             </div>
                                         </div>

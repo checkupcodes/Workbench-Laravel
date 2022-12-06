@@ -91,7 +91,7 @@
                                                 <div class="card-body">
                                                     <img id="ProfileImage"
                                                         src="{{ !empty($aboutPage->about_image) ? url($aboutPage->about_image) : url('upload/no_image.jpg') }}"
-                                                        class="rounded-circle img-fluid" alt="profile_image">
+                                                        class=" img-fluid" alt="profile_image">
                                                 </div>
                                             </div>
                                         </div>

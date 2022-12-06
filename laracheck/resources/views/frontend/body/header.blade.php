@@ -7,10 +7,10 @@
                     <div class="menu__wrap">
                         <nav class="menu__nav">
                             <div class="logo">
-                                <a href="{{url('frontend.index')}}" class="logo__black"><img
+                                <a href="{{url('/')}}" class="logo__black"><img
                                         src="{{ asset('frontend/assets/img') }}/logo/logoxx.png" alt="" width="70px">
                                         <span style="font-size:x-large;margin-left:20px;padding:10px"> Check-up Codes</span></a>
-                                <a href="index.html" class="logo__white"><img
+                                <a href="{{url('/')}}" class="logo__white"><img
                                         src="{{ asset('frontend/assets/img') }}/logo/logo_white.png" alt=""></a>
                             </div>
                             <div class="navbar__wrap main__menu d-none d-xl-flex">
