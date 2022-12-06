@@ -2,11 +2,11 @@
 @section('admin')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style type="text/css">
-        .bootstrap-tagsinput .tag{
+        .bootstrap-tagsinput .tag {
             margin-right: 5px;
             color: #ccc;
             font-weight: 700px;
-        } 
+        }
     </style>
 
     <div class="content-body">
@@ -19,7 +19,7 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('store.portfolio') }}" enctype="multipart/form-data"
+                                <form method="POST" action="{{ route('store.blog') }}" enctype="multipart/form-data"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
 
@@ -34,9 +34,10 @@
                                             <div class="card" style="width:100%; margin-left: 20px">
                                                 <select name="blog_category_id"
                                                     class="default-select form-control wide mb-3">
-                                                    <option>Option 1</option>
-                                                    <option>Option 2</option>
-                                                    <option>Option 3</option>
+                                                    @foreach ($categories as $cat)
+                                                        <option value="{{ $cat->id }}">{{ $cat->blog_category_name }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>

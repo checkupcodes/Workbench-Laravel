@@ -16,8 +16,8 @@
                                 <table id="example3" class="display" style="min-width: 845px">
                                     <thead>
                                         <tr>
-                                            <th>SN</th>
-                                            <th>Blog Category</th>
+                                            <th style="width: 5%">SN</th>
+                                            <th style="width: 5%">BC</th>
                                             <th>Blog Title</th>
                                             <th>Blog Tags</th>
                                             <th>Blog Image</th>
