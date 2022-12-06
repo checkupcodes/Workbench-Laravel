@@ -46,14 +46,15 @@
                 </ul>
                 </a>
             </li>
+            <hr>
 
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-table"></i>
-                    <span class="nav-text">Table</span>
+                    <span class="nav-text">Blog Category</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                    <li><a href="table-datatable-basic.html">Datatable</a></li>
+                    <li><a href="{{route('all.blog.category')}}">All Blog Category</a></li>
+                    <li><a href="table-bootstrap-basic.html">Add Blog Category</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">

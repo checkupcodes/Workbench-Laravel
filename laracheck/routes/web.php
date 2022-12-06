@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSlideController;
 use App\Http\Controllers\Home\AboutContoller;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\Home\BlogCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,12 @@ Route::controller(PortfolioController::class)->group(function () {
 
     Route::get('/details/portfolio/{id}', 'DetailsPortfolio')->name('details.portfolio');
     Route::get('/portfolio', 'IndexPortfolio')->name('index.portfolio');
+});
+
+//BlogCategoryController  Route
+Route::controller(BlogCategoryController::class)->group(function () {
+    Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');
+    Route::post('/upload/slide', 'UploadSlide')->name('upload.slide');
 });
 
 

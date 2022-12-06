@@ -9,7 +9,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Portfolio All</h4>
+                            <h4 class="card-title">Blog Category All Data</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -17,27 +17,18 @@
                                     <thead>
                                         <tr>
                                             <th>SN</th>
-                                            <th >Portfolio Name</th>
-                                            <th>Portfolio Title</th>
-                                            <th>Portfolio İmage</th>
+                                            <th>Blog Category Name</th>
                                             <th>Action</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @php($i = 1)
-                                        @foreach ($portfolio as $item)
+                                        @foreach ($blog_category as $item)
                                             <tr>
                                                 <td>{{ $i++ }}</td>
-                                                <td>{{ $item->portfolio_name}}</td>
-                                                <td>{{ $item->portfolio_title }}</td>
-                                                <td>
-                                                    <img src="{{ asset($item->portfolio_image) }}" alt=""
-                                                        style="width: 60px;height:50px">
-                                                </td>
-                                                <td>
-                                                    {{ $item->created_at }}
-                                                </td>
+                                                <td>{{ $item->blog_category_name }}</td>
+                                                
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="{{ route('edit.portfolio', $item->id) }}"
