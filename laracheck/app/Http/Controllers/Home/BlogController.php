@@ -86,7 +86,7 @@ class BlogController extends Controller
                 'message' => 'Blog Updated Successfully without Image',
                 'alert-type' => 'success'
             );
-            return Redirect()->route('all.page')->with($notification);
+            return Redirect()->route('all.blog')->with($notification);
         }
     }
 
@@ -117,5 +117,13 @@ class BlogController extends Controller
         );
         return Redirect()->back()->with($notification);
 
+    }
+
+    public function BlogDetails($id)
+    {
+        $blog = Blog::findOrFail($id);
+        $all_blog = Blog::latest()->limit(5)->get();
+        $categories = BlogCategory::orderBy('blog_category_name', 'ASC')->get();
+        return view('frontend.blog_details', compact('blog','all_blog','categories'));
     }
 }
