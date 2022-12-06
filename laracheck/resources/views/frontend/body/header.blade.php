@@ -18,16 +18,11 @@
                                     <li class="active"><a href="{{url('/')}}">Home</a></li>
                                     <li><a href="{{route('home.about')}}">About</a></li>
                                     <li><a href="services-details.html">Services</a></li>
-                                    <li class="menu-item-has-children"><a href="#">Portfolio</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="{{route('index.portfolio')}}">Portfolio</a></li>
                                     <li class="menu-item-has-children"><a href="#">Our Blog</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog.html">Our News</a></li>
-                                            <li><a href="blog-details.html">News Details</a></li>
+                                            <li><a href="">Our News</a></li>
+                                            <li><a href="">News Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">contact me</a></li>

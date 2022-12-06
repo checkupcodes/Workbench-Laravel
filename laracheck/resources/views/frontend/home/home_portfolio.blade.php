@@ -22,21 +22,19 @@
                         <div class="portfolio__active">
 
                             @foreach ($portfolio as $item)
-
-
-                            <div class="portfolio__item">
-                                <div class="portfolio__thumb">
-                                    <img src="{{ asset($item->portfolio_image) }}"
-                                        alt="">
+                                <div class="portfolio__item">
+                                    <div class="portfolio__thumb">
+                                        <img src="{{ asset($item->portfolio_image) }}" alt="">
+                                    </div>
+                                    <div class="portfolio__overlay__content">
+                                        <span>{{ $item->portfolio_name }}</span>
+                                        <h4 class="title"><a
+                                                href="{{ route('details.portfolio',$item->id )}}">{{ $item->portfolio_title }}</a>
+                                        </h4>
+                                        <a href="{{ route('details.portfolio', $item->id) }}" class="link">Case
+                                            Study</a>
+                                    </div>
                                 </div>
-                                <div class="portfolio__overlay__content">
-                                    <span>{{$item->portfolio_name}}</span>
-                                    <h4 class="title"><a href="portfolio-details.html">{{$item->portfolio_title}}</a>
-                                    </h4>
-                                    <a href="portfolio-details.html" class="link">Case Study</a>
-                                </div>
-                            </div>
-
                             @endforeach
 
                         </div>
