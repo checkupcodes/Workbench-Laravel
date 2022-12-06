@@ -126,4 +126,13 @@ class BlogController extends Controller
         $categories = BlogCategory::orderBy('blog_category_name', 'ASC')->get();
         return view('frontend.blog_details', compact('blog','all_blog','categories'));
     }
+
+    public function CategoryBlog($id)
+    {
+        $blog_post = Blog::where('blog_category_id', $id)->orderBy('id','DESC')->get();
+        $categories = BlogCategory::orderBy('blog_category_name', 'ASC')->get();
+        $all_blog = Blog::latest()->limit(5)->get();
+
+        return view('frontend.category_blog', compact('blog_post','categories','all_blog'));
+    }
 }

@@ -97,6 +97,7 @@ Route::controller(BlogController::class)->group(function () {
 
     Route::post('/update/blog', 'UpdateBlog')->name('update.blog');
     Route::get('/blog/details/{id}', 'BlogDetails')->name('blog.details');
+    Route::get('/category/blog/{id}', 'CategoryBlog')->name('category.blog');
 
 });
 

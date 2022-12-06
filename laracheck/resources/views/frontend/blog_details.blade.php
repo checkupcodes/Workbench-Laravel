@@ -223,7 +223,7 @@
                                         <li class="rc__post__item">
                                             <div class="rc__post__thumb">
                                                 <a href="blog-details.html"><img src="{{ asset($all->blog_image) }}"
-                                                        alt=""></a>
+                                                        alt="" width="850px"></a>
                                             </div>
                                             <div class="rc__post__content">
                                                 <h5 class="title"><a href="blog-details.html">{{ $all->blog_title }}</a>
@@ -240,7 +240,7 @@
                                 <ul class="sidebar__cat">
 
                                     @foreach ($categories as $cat)
-                                        <li class="sidebar__cat__item"><a href="blog.html">{{ $cat->blog_category_name }}
+                                        <li class="sidebar__cat__item"><a href="{{route('category.blog',$cat->id)}}">{{ $cat->blog_category_name }}
                                                 (6)
                                             </a></li>
                                     @endforeach
