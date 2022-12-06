@@ -30,7 +30,7 @@
                                         @foreach ($blog as $item)
                                             <tr>
                                                 <td>{{ $i++ }}</td>
-                                                <td>{{ $item->blog_category_id }}</td>
+                                                <td>{{ $item['blog_category']['blog_category_name']}}</td>
                                                 <td>{{ $item->blog_title }}</td>
                                                 <td>{{ $item->blog_tags }}</td>
                                                 <td>
