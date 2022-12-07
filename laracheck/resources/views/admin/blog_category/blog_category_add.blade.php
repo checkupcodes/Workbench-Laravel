@@ -26,9 +26,6 @@
                                             <input name="blog_category_name" type="text" class="form-control"
                                                 style="margin-left: 30px" id="validationCustomUsername" required />
                                         </div>
-                                        @error('portfolio_name')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
                                     </div>
                                     <hr />
 
@@ -51,3 +48,12 @@
         </div>
     </div>
 @endsection
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 300,
+        });
+    });
+</script>

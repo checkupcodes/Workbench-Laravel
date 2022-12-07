@@ -47,13 +47,7 @@ class BlogCategoryController extends Controller
     }
 
     public function UpdateBlogCategory(Request $request,$id)
-    {
-        $request->validate([
-            'blog_category_name' => 'required',
-        ],[
-            'blog_category_name.required' => 'Input Blog Category Name',
-        ]);
-
+    {e
         BlogCategory::findOrFail($id)->update([
             'blog_category_name' => $request->blog_category_name,
             'updated_at' => Carbon::now(),
