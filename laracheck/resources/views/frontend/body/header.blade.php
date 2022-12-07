@@ -24,7 +24,7 @@
                                     <li><a href="{{ route('home.blog') }}">Our Blog</a>
                                     
                                     </li>
-                                    <li><a href="contact.html">contact me</a></li>
+                                    <li><a href="{{ route('contact.me') }}">contact me</a></li>
                                 </ul>
                             </div>
                             <div class="header__btn d-none d-md-block">

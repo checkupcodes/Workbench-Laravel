@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Footer;
 use Illuminate\Support\Carbon;
-use Image;
 class FooterController extends Controller
 {
     public function FooterSetup()
