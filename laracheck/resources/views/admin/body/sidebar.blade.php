@@ -75,6 +75,14 @@
                 <li><a href="{{ route('footer.setup') }}">Footer Setup</a></li>
                 <li><a href="{{ route('add.blog') }}">Add Blog</a></li>
             </ul>
+
+            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                <i class="fas fa-table"></i>
+                <span class="nav-text">Contact Message</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="{{ route('contact.message') }}">Footer Setup</a></li>
+            </ul>
         </li>
         </ul>
         {{-- <div class="side-bar-profile">
