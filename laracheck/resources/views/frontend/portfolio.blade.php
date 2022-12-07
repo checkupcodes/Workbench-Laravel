@@ -1,5 +1,10 @@
 @extends('frontend.app')
 @section('main')
+
+@section('title')
+Portfolio | Check-up Codes
+@endsection
+
     <main>
 
         <!-- breadcrumb-area -->

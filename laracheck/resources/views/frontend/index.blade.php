@@ -1,5 +1,9 @@
 @extends('frontend.app')
 @section('main')
+
+@section('title')
+Home | Check-up Codes
+@endsection
     <!-- banner-area -->
     @include('frontend.home.home_slide')
     <!-- banner-area-end -->

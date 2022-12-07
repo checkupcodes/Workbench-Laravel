@@ -19,16 +19,16 @@
                                 <ul class="navigation">
                                     <li class="active"><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ route('home.about') }}">About</a></li>
-                                    <li><a href="services-details.html">Services</a></li>
+                                    <li><a href="{{ route('home.about') }}">Services</a></li>
                                     <li><a href="{{ route('index.portfolio') }}">Portfolio</a></li>
                                     <li><a href="{{ route('home.blog') }}">Our Blog</a>
-                                    
+
                                     </li>
                                     <li><a href="{{ route('contact.me') }}">contact me</a></li>
                                 </ul>
                             </div>
                             <div class="header__btn d-none d-md-block">
-                                <a href="{{url('/login')}}" class="btn">Login / Dashboard</a>
+                                <a href="{{ url('/login') }}" class="btn">Login / Dashboard</a>
                             </div>
                         </nav>
                     </div>
@@ -38,9 +38,11 @@
                             <div class="close__btn"><i class="fal fa-times"></i></div>
                             <div class="nav-logo">
                                 <a href="index.html" class="logo__black"><img
-                                        src="{{ asset('frontend/assets/img') }}/logo/logo_black.png" alt=""></a>
+                                        src="{{ asset('frontend/assets/img') }}/logo/logo_black.png"
+                                        alt=""></a>
                                 <a href="index.html" class="logo__white"><img
-                                        src="{{ asset('frontend/assets/img') }}/logo/logo_white.png" alt=""></a>
+                                        src="{{ asset('frontend/assets/img') }}/logo/logo_white.png"
+                                        alt=""></a>
                             </div>
                             <div class="menu__outer">
                                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
