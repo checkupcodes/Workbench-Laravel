@@ -106,6 +106,7 @@ Route::controller(BlogController::class)->group(function () {
 
 Route::controller(FooterController::class)->group(function () {
     Route::get('/footer/setup', 'FooterSetup')->name('footer.setup');
+    Route::post('/update/footer', 'UpdateFooter')->name('update.footer');
 
 });
 

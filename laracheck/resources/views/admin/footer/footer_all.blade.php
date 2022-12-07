@@ -12,7 +12,7 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('upload.about') }}"
+                                <form method="POST" action="{{ route('update.footer') }}"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
 
@@ -25,7 +25,7 @@
                                             Number
                                         </label>
                                         <div class="input-group">
-                                            <input name="title" type="text" class="form-control"
+                                            <input name="number" type="text" class="form-control"
                                                 style="margin-left: 30px" id="validationCustomUsername"
                                                 value="{{ $footer->number }}" required="" />
                                         </div>
@@ -39,7 +39,7 @@
                                             Short Description
                                         </label>
                                         <div class="input-group">
-                                            <input name="short_title" type="text" class="form-control"
+                                            <input name="short_description" type="text" class="form-control"
                                                 style="margin-left: 30px" id="validationCustomUsername"
                                                 value="{{ $footer->short_description }}" required="" />
                                         </div>

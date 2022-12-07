@@ -14,4 +14,26 @@ class FooterController extends Controller
         $footer = Footer::first();
         return view('admin.footer.footer_all', compact('footer'));
     }
+
+    public function UpdateFooter(Request $request)
+    {
+        $footer_id = $request->id;
+        Footer::findOrFail($footer_id)->update([
+            'number' => $request->number,
+            'short_description' => $request->short_description,
+            'address' => $request->address,
+            'email' => $request->email,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'linkedin' => $request->linkedin,
+            'github' => $request->github,
+            'copyright' => $request->copyright,
+            'updated_at' => Carbon::now(),
+        ]);
+        $notification = array(
+            'message' => 'Footer Updated Successfully',
+            'alert-type' => 'success'
+        );
+        return Redirect()->back()->with($notification);
+    }
 }
