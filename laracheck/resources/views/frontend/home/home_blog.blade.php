@@ -10,10 +10,10 @@
             <div class="col-lg-4 col-md-6 col-sm-9">
                 <div class="blog__post__item">
                     <div class="blog__post__thumb">
-                        <a href="blog-details.html"><img
+                        <a href="{{route('blog.details',$item->id)}}"><img
                                 src="{{ asset($item->blog_image)}}" alt=""></a>
                         <div class="blog__post__tags">
-                            <a href="blog.html">{{$item['blog_category']['blog_category_name']}}</a>
+                            <a href="{{route('blog.details',$item->id)}}">{{$item['blog_category']['blog_category_name']}}</a>
                         </div>
                     </div>
                     <div class="blog__post__content">
