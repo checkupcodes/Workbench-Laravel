@@ -66,6 +66,16 @@
                     <li><a href="{{ route('add.blog') }}">Add Blog</a></li>
                 </ul>
             </li>
+
+            <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                <i class="fas fa-table"></i>
+                <span class="nav-text">Footer</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="{{ route('footer.setup') }}">Footer Setup</a></li>
+                <li><a href="{{ route('add.blog') }}">Add Blog</a></li>
+            </ul>
+        </li>
         </ul>
         {{-- <div class="side-bar-profile">
             <div class="d-flex align-items-center justify-content-between mb-3">
