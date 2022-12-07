@@ -12,6 +12,11 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
+    public function HomeMain()
+    {
+        return view('frontend.index');
+    }
+
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
