@@ -47,7 +47,7 @@ class BlogCategoryController extends Controller
     }
 
     public function UpdateBlogCategory(Request $request,$id)
-    {e
+    {
         BlogCategory::findOrFail($id)->update([
             'blog_category_name' => $request->blog_category_name,
             'updated_at' => Carbon::now(),

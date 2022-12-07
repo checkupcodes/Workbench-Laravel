@@ -12,17 +12,17 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form method="POST" action="{{ route('store.blog.category') }}"
+                                <form method="POST" id="myForm" action="{{ route('store.blog.category') }}"
                                     class="form-valide-with-icon needs-validation">
                                     @csrf
 
                                     <div class="mb-4" style="display :flex">
-                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                        <label class="form-control  text-label btn btn-primary form-label center text-4xl"
                                             style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px"
                                             for="validationCustomUsername">
                                             Portfolio Name
                                         </label>
-                                        <div class="input-group">
+                                        <div class="form-group input-group">
                                             <input name="blog_category_name" type="text" class="form-control"
                                                 style="margin-left: 30px" id="validationCustomUsername" required />
                                         </div>
@@ -52,8 +52,33 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#summernote').summernote({
-            height: 300,
+        $('#myForm').validate({
+            rules: {
+                blog_category_name: {
+                    required: true,
+                },
+                blog_title: {
+                    required: true,
+                },
+            },
+            messages: {
+                blog_category_name: {
+                    required: "Please enter your blog category name",
+                },
+                blog_title: {
+                    required: "Please enter your blog title",
+                },
+            },
+            errorElement: 'span',
+            errorPlacement: function(error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            hightlight: function(element, errorClass, validClass) {
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                $(element).removeClass('is-invalid');
         });
     });
 </script>
