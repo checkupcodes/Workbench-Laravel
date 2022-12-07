@@ -75,6 +75,20 @@
                                     </div>
                                     <hr />
 
+                                    <div class="mb-4" style="display :flex">
+                                        <label class="form-control text-label btn btn-primary form-label center text-4xl"
+                                            style="width: 150px ;padding:5px ; font-size:14px; height:40px ; border-radius:8px"
+                                            for="validationCustomUsername">
+                                            Instagram
+                                        </label>
+                                        <div class="input-group">
+                                            <input name="instagram" type="text" class="form-control"
+                                                style="margin-left: 30px" id="validationCustomUsername"
+                                                value="{{ $footer->instagram }}" required="" />
+                                        </div>
+                                    </div>
+                                    <hr />
+
 
                                     <div class="mb-4" style="display :flex">
                                         <label class="form-control text-label btn btn-primary form-label center text-4xl"

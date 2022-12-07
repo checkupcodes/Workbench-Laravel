@@ -24,6 +24,7 @@ class FooterController extends Controller
             'address' => $request->address,
             'email' => $request->email,
             'facebook' => $request->facebook,
+            'instagram' => $request->instagram,
             'twitter' => $request->twitter,
             'linkedin' => $request->linkedin,
             'github' => $request->github,
