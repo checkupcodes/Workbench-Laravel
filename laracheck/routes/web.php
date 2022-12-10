@@ -9,6 +9,7 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\DemoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,13 @@ use App\Http\Controllers\Home\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
+
+Route::controller(DemoController::class)->group(function () {
+    Route::get('/', 'Home')->name('home');
+    Route::get('/', 'NotFound')->name('not.found');
+    
 });
+
 
 //Admin Controller Route
 Route::middleware(['auth'])->group(function () {
@@ -124,10 +129,6 @@ Route::controller(ContactController::class)->group(function () {
 
 
 });
-
-Route::get('/',function () {
-    return view('frontend.index');
-})->name('home');;
 
 Route::get('/dashboard', function () {
     return view('admin.index');
